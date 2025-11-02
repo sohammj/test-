@@ -121,8 +121,8 @@ export const ReviewsMap = () => {
               </h3>
               <p className="text-[#0E1E2A]/70">
                 123 Art Therapy Lane,<br />
-                Indiranagar, Bangalore - 560038<br />
-                Karnataka, India
+                Matunga, mumbai - 400065 example<br />
+                mumbai, India
               </p>
               <div className="pt-3 border-t border-[#0E1E2A]/10">
                 <p className="text-[#0E1E2A]/70">

@@ -81,7 +81,7 @@ export const Footer = () => {
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span>
                   123 Art Therapy Lane,<br />
-                  Indiranagar, Bangalore
+                  Matunga, mumbai
                 </span>
               </li>
             </ul>
