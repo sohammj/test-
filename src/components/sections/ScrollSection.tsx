@@ -23,7 +23,7 @@ const services = [
     number: "02",
     title: "Odoo Customization",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
+      "/odoo.jpg",
     slug: "odooustomization",
     text: "End-to-end customization of Odoo to automate your sales, inventory, and finance workflows - seamlessly integrated with your business processes.",
   },
@@ -31,7 +31,7 @@ const services = [
     number: "03",
     title: "AI & Dashboard Solutions",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+      "/ai.jpg",
     slug: "aidashboard-solutions",
     text: "We build intelligent dashboards and workflow automations powered by AI - transforming data into actionable insights for smarter decisions.",
   },

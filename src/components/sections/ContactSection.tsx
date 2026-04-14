@@ -79,6 +79,28 @@ export default function ContactSection() {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          align-items: center;
+          text-align: center;
+        }
+        .contact-left h2 {
+          text-align: center;
+        }
+        .contact-label {
+          text-align: center;
+        }
+        .contact-info-grid {
+          width: 100%;
+          display: grid;
+          gap: 18px;
+        }
+        .contact-info-row {
+          padding: 0 0 18px;
+          border-bottom: 1px solid #d8dde5;
+          display: grid;
+          grid-template-columns: 100px 1fr;
+          gap: 12px;
+          align-items: start;
+          text-align: left;
         }
         .contact-bg-letter {
           position: absolute;
@@ -107,7 +129,7 @@ export default function ContactSection() {
           }
         }
 
-        /* iPad Mini / standard tablet (768px–1024px) */
+        /* Tablet (768px–900px) */
         @media (max-width: 900px) {
           .contact-grid {
             grid-template-columns: 1fr;
@@ -129,6 +151,9 @@ export default function ContactSection() {
           .contact-submit-btn {
             width: 100%;
           }
+          .contact-info-row {
+            grid-template-columns: 80px 1fr;
+          }
         }
 
         /* Phone (below 640px) */
@@ -139,6 +164,9 @@ export default function ContactSection() {
           .contact-bg-letter {
             font-size: clamp(140px, 52vw, 240px);
             opacity: 0.5;
+          }
+          .contact-info-row {
+            grid-template-columns: 72px 1fr;
           }
         }
       `}</style>
@@ -151,7 +179,7 @@ export default function ContactSection() {
           padding: "clamp(64px, 10vw, 140px) 0 clamp(56px, 8vw, 120px)",
           background: "#f3f3ef",
           overflow: "hidden",
-          fontFamily: "Inter, Arial, sans-serif",
+          fontFamily: "inherit",
         }}
       >
         <div aria-hidden="true" className="contact-bg-letter">S</div>
@@ -172,7 +200,7 @@ export default function ContactSection() {
 
             {/* LEFT */}
             <div className="contact-left">
-              <p style={{
+              <p className="contact-label" style={{
                 margin: "0 0 18px",
                 fontSize: "14px",
                 letterSpacing: "0.26em",
@@ -184,34 +212,30 @@ export default function ContactSection() {
 
               <h2 style={{
                 margin: "0 0 28px",
-                fontSize: "clamp(2.4rem, 10vw, 6.2rem)",
+                fontSize: "clamp(3rem, 16vw, 6.2rem)",
                 lineHeight: 0.95,
                 letterSpacing: "-0.07em",
                 fontWeight: 700,
                 color: "#111111",
+                textAlign: "center",
               }}>
                 LET'S BUILD
                 <br />SOMETHING AMAZING
                 <br />TOGETHER!
               </h2>
 
-              <div style={{ display: "grid", gap: "18px" }}>
+              <div className="contact-info-grid">
                 {[
                   ["Email", "soham@sovratech.com"],
                   ["Response", "We'll respond within 24–48 hours"],
                 ].map(([label, value]) => (
-                  <div
-                    key={label}
-                    style={{
-                      padding: "0 0 18px",
-                      borderBottom: "1px solid #d8dde5",
-                      display: "grid",
-                      gridTemplateColumns: "100px 1fr",
-                      gap: "12px",
-                      alignItems: "start",
-                    }}
-                  >
-                    <span style={{ fontSize: "12px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#7a7a7a" }}>
+                  <div key={label} className="contact-info-row">
+                    <span style={{
+                      fontSize: "12px",
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: "#7a7a7a",
+                    }}>
                       {label}
                     </span>
                     <span style={{ fontSize: "15px", lineHeight: 1.6, color: "#171717" }}>
@@ -260,7 +284,6 @@ export default function ContactSection() {
                     Tell us what you're building.
                   </h3>
 
-                  {/* Name + Email — stacks to 1 col on mobile via class */}
                   <div className="contact-name-email-grid">
                     {FIELDS.slice(0, 2).map((field) => (
                       <Field

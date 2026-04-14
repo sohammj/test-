@@ -105,7 +105,7 @@ export default function ProjectShowcase() {
                   className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.08em] text-[#111] transition hover:text-[#004aad]"
                 >
                   {featuredProject.linkLabel}
-                  <span className="text-[#004aad]">↗</span>
+                  <span className="text-[#004aad]">→</span>
                 </a>
               </div>
             </div>

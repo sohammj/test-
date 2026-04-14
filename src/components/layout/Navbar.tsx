@@ -173,7 +173,7 @@ export default function Navbar() {
 
             <div className="absolute inset-0 bg-black/10" />
 
-            <div className="relative flex h-full w-full flex-col px-5 pb-8 pt-28 md:px-8 lg:px-10">
+            <div className="relative flex h-full w-full flex-col px-5 pt-24 pb-24 md:px-8 lg:px-10">
               <div className="grid h-full grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
                 <div className="hidden lg:flex lg:flex-col lg:justify-center">
                   <motion.div
@@ -193,7 +193,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex h-full flex-col">
-                  <div className="flex flex-1 items-center justify-center lg:justify-end lg:pr-10">
+                  <div className="flex flex-1 items-center justify-center lg:justify-end lg:pr-10 lg:pb-0 pb-10">
                     <div className="w-full lg:w-auto space-y-3 md:space-y-0">
                       {links.map((link, index) => (
                         <motion.a

@@ -98,82 +98,82 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative border-t border-black/10 bg-[#f3f3ef] px-6 py-20 text-black md:px-10 lg:px-16">
-      <div className="pointer-events-none absolute bottom-0 right-0 h-40 w-40 rounded-full bg-[#004aad]/10 blur-3xl" />
+   <footer className="relative border-t border-black/10 bg-[#f3f3ef] px-6 py-16 text-black md:px-10 md:py-20 lg:px-16">
+    <div className="pointer-events-none absolute bottom-0 right-0 h-40 w-40 rounded-full bg-[#004aad]/10 blur-3xl" />
 
-      <div className="relative mx-auto w-full max-w-7xl">
-        <div className="grid items-start gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.9fr_1fr]">
-          <div>
-            <a
-              href="/"
-              onClick={scrollToTop}
-              className="text-[1.6rem] font-black tracking-[-0.05em] text-[#004aad]"
-            >
-              SovraTech
-            </a>
+    <div className="relative mx-auto w-full max-w-7xl">
+      <div className="grid items-start gap-12 text-center md:grid-cols-2 md:text-left lg:grid-cols-[1.2fr_0.9fr_1fr]">
+        <div className="flex flex-col items-center md:items-start">
+          <a
+            href="/"
+            onClick={scrollToTop}
+            className="text-[1.75rem] font-black tracking-[-0.05em] text-[#004aad]"
+          >
+            SovraTech
+          </a>
 
-            <p className="mt-4 max-w-sm text-[14px] leading-6 text-black/60">
-              Building thoughtful, high-performance digital products at the intersection of design, data, and technology.
-            </p>
-          </div>
+          <p className="mt-4 max-w-sm text-[14px] leading-6 text-black/60">
+            Building thoughtful, high-performance digital products at the intersection of design, data, and technology.
+          </p>
+        </div>
 
-          <div className="flex flex-col items-start gap-5 md:items-start">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-black/40">
-              Site
-            </p>
+        <div className="flex flex-col items-center gap-5 md:items-start">
+          <p className="text-[11px] uppercase tracking-[0.25em] text-black/40">
+            Site
+          </p>
 
-            <div className="grid grid-cols-2 gap-x-10 gap-y-3">
-              {links.map((link) => (
-                <a
-                  key={link.id}
-                  href="/"
-                  onClick={(e) => scrollToSection(e, link.id)}
-                  className="text-[14px] text-black/70 transition hover:text-[#004aad]"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col items-start gap-4">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-black/40">
-              Connect
-            </p>
-
-            <div className="flex items-center gap-4">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-center md:text-left">
+            {links.map((link) => (
               <a
-                href="https://linkedin.com/company/sovratech/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/60 backdrop-blur-md transition hover:scale-[1.05] hover:border-[#004aad] hover:text-[#004aad]"
+                key={link.id}
+                href="/"
+                onClick={(e) => scrollToSection(e, link.id)}
+                className="text-[15px] text-black/70 transition hover:text-[#004aad]"
               >
-                <LinkedInIcon className="h-[18px] w-[18px]" />
+                {link.label}
               </a>
-
-              <a
-                href="https://www.instagram.com/sovratech/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/60 backdrop-blur-md transition hover:scale-[1.05] hover:border-[#004aad] hover:text-[#004aad]"
-              >
-                <InstagramIcon className="h-[18px] w-[18px]" />
-              </a>
-
-              <a
-                href="mailto:hello@sovratech.com"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/60 backdrop-blur-md transition hover:scale-[1.05] hover:border-[#004aad] hover:text-[#004aad]"
-              >
-                <MailIcon className="h-[18px] w-[18px]" />
-              </a>
-            </div>
-
-            <p className="text-[11px] uppercase tracking-[0.25em] text-black/40">
-              Mumbai, India · {time} IST
-            </p>
+            ))}
           </div>
         </div>
+
+        <div className="flex flex-col items-center gap-4 md:items-start">
+          <p className="text-[11px] uppercase tracking-[0.25em] text-black/40">
+            Connect
+          </p>
+
+          <div className="flex items-center justify-center gap-4 md:justify-start">
+            <a
+              href="https://linkedin.com/company/sovratech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 bg-white text-black transition hover:scale-[1.05] hover:border-[#004aad] hover:text-[#004aad]"
+            >
+              <LinkedInIcon className="h-[18px] w-[18px]" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/sovratech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 bg-white text-black transition hover:scale-[1.05] hover:border-[#004aad] hover:text-[#004aad]"
+            >
+              <InstagramIcon className="h-[18px] w-[18px]" />
+            </a>
+
+            <a
+              href="mailto:hello@sovratech.com"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 bg-white text-black transition hover:scale-[1.05] hover:border-[#004aad] hover:text-[#004aad]"
+            >
+              <MailIcon className="h-[18px] w-[18px]" />
+            </a>
+          </div>
+
+          <p className="text-[11px] uppercase tracking-[0.25em] text-black/40">
+            Mumbai, India · {time} IST
+          </p>
+        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   );
 }

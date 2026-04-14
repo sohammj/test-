@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="text-4xl md:text-5xl font-playfair leading-snug text-white max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto text-4xl md:text-5xl font-medium leading-snug tracking-[-0.04em] text-white"
         >
           Empowering Your Digital Presence
         </motion.h2>
